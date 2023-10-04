@@ -1,11 +1,12 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, Link } from 'react-router-dom'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export default function RootLayout() {
     return (
         <div className="root-layout">
             <nav className="nav-bar">
                 <div className="title">
-                <h2>Jobstreet</h2>
+                <Link to="/"><h2>Jobstreet</h2></Link>
                 </div>
 
                 <div className="nav-menu">
@@ -15,6 +16,7 @@ export default function RootLayout() {
                 <NavLink to="careers">Careers</NavLink>
                 </div>
             </nav>
+            <Breadcrumbs />
 
             <main>
                 <Outlet />

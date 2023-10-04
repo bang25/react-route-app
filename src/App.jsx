@@ -8,6 +8,7 @@ import Faq from './pages/help/Faq'
 import HelpLayout from './layouts/HelpLayout'
 import CareersLayout from './layouts/CareersLayout'
 import Careers from './pages/careers/Careers'
+import CareerDetails from './pages/careers/CareerDetails.jsx'
 
 
 const route = createBrowserRouter(
@@ -21,6 +22,8 @@ const route = createBrowserRouter(
       </ Route>
       <Route path='careers' element={<CareersLayout />} >
         <Route index element={<Careers />} />
+        <Route path=':id' element={<CareerDetails />} />
+
       </ Route>
     </Route>
   )

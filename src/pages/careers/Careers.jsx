@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Careers() {
     const [careers, setCareers] = useState([])
@@ -15,11 +16,10 @@ export default function Careers() {
     return (
         <div className="careers">
             {careers.map(career => (
-                <div className="career" key={career.id}>
+                <Link to={`/careers/${career.title}`} className="career" key={career.id}>
                     <h2>{career.title}</h2>
                     <p>{career.location}</p>
-                    <p>{career.salary}</p>
-                </div>
+                </Link>
             ))}
         </div>
 
