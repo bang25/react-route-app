@@ -41,7 +41,7 @@ main {
 }
 
 .title a h2{
-  font-size: calc(1rem + 1.5vw);
+  font-size: calc(1rem + 1.3vw);
   border-bottom: 3px solid red;
   color: white;
 }
@@ -98,13 +98,10 @@ color: red;
   flex-direction: column;  
 }
 
-.careers {
-  max-width: 1280px;
+.careers{
   display: flex;
-  justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
 
 .career{
@@ -171,9 +168,6 @@ color: red;
 }
 
 /* contact form */
-form {
-  margin-top: 30px;
-}
 form input, form label span, form textarea {
   display: block;
 }
@@ -189,7 +183,7 @@ form label span {
   margin-bottom: 10px;
 }
 
-button {
+.submit {
   border: 0;
   padding: 8px;
   border-radius: 4px;
@@ -197,5 +191,22 @@ button {
   background: var(--primary);
   cursor: pointer;
   width: 313px;
+}
+
+.logout {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+.message {
+  color: red;
+}
+
+.message::before {
+  content: "* ";
 }
 
